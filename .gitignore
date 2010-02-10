@@ -30,7 +30,6 @@
 *.gcno
 *.hhc
 *.hhp
-*.cmd
 *.old
 *.orig
 *~
