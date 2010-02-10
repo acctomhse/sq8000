@@ -1,0 +1,27 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Leopard Development Kit V
+// RVDEBUG initial...
+
+/////////////////////////////////////
+// Mem. Remap
+//ARM9
+setmem /32 0x1801c000=0xdeadbeef
+//ARM7
+setmem /32 0x1801c004=0xdeadbeef
+
+//SDR ARM9 Remap
+//setmem /32 0x1801c000=0xbeefdead
+
+//DDR
+setmem /32 0x180b4000=0x00001161
+setmem /32 0x180b400c=0x0000030a
+setmem /32 0x180b4004=0x000000fa
+//SDR
+setmem /32 0x180b0100=0x20
+setmem /32 0x180b0104=0x1f
+setmem /32 0x180b0108=0x2210
+
+// arbiter
+setmem /32 0x18084020=0xf
+

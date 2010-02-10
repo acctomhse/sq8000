@@ -1,0 +1,19 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Panther Development Kit PC9220
+// RVDEBUG initial...
+
+/////////////////////////////////////
+// Mem. Remap
+setmem /32 0x19100024=0x92200800
+
+//PC9220 SDR external
+//setmem /32 0x18004004=0xa
+//setmem /32 0x18004008=0x1111
+
+
+//PC9220 SDR internel
+setmem /32 0x18004004=0xff
+setmem /32 0x18004008=0x1010
+
+

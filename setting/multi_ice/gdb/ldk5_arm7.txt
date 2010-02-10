@@ -1,0 +1,27 @@
+## Socle Technology Corp.
+#####################################
+echo Socle Leopard Development Kit V \n
+echo GDB initial... \n
+
+#####################################
+## Mem. Remap
+##ARM9
+set *(0x1881c000)=0xdeadbeef
+##ARM7
+set *(0x1881c004)=0xdeadbeef
+
+##SDR ARM9 Remap
+##set *(0x1881c000)=0xbeefdead
+
+##DDR
+set *(0x188b4000)=0x00001161
+set *(0x188b400c)=0x0000030a
+set *(0x188b4004)=0x000000fa
+##SDR
+set *(0x188b0100)=0x20
+set *(0x188b0104)=0x1f
+set *(0x188b0108)=0x2210
+
+## arbiter
+set *(0x18884020)=0xf
+

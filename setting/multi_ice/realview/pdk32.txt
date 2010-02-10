@@ -1,0 +1,51 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Panther Development Kit 32 bit
+// RVDEBUG initial...
+
+//SCU
+setmem /32 0x1803C018 = 0xbeefdead
+
+// SDR Setting 16bit
+//setmem /32 0x18058100 = 0x00000020
+//setmem /32 0x18058104 = 0x0000000A
+//setmem /32 0x18058108 = 0x00002121
+//setmem /32 0x1805810C = 0x00000005
+
+//32 bit
+setmem /32 0x18058100 = 0x00000020
+setmem /32 0x18058104 = 0x000000ff
+setmem /32 0x18058108 = 0x00002121
+setmem /32 0x1805810C = 0x0000000A
+
+//SCU UCFG/DCFG Mode
+setmem /32 0x1803c00c = 0x00032000	//UCFG:1 
+//setmem /32 0x1803c00c = 0x00002040	//UCFG:1 and UART1 to occupy HDMA request 2/3
+//setmem /32 0x1803c008 = 0x000400ff	//UPLL enable (for uart clock)
+
+//frequency
+//setmem /32 0x1803c004 = 0x0f015228 // 166MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f0141a8 // 133MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f010f84 // 132MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f010900 // 120MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f0128a0 // 100MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f010e01 // 90MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f012891 // 83MHz		//m: , n: , od: 
+setmem /32 0x1803c004 = 0x0f010f85 // 66MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f0128a1 // 50MHz		//m: , n: , od: 
+//setmem /32 0x1803c004 = 0x0f012893 // 41.5MHz		//m: , n: , od:  
+//setmem /32 0x1803c004 = 0x0f012713 // 40MHz		//m: , n: , od:
+//setmem /32 0x1803c004 = 0x0f010f87 // 33MHz		//m: , n: , od: 
+
+
+setmem /32 0x1803c008 = 0x00001770	//1:1
+//setmem /32 0x1803c008 = 0x00011770	//2:1
+setmem /32 0x1803c018 = 0xdeeddeed
+
+//for LCD ADC clock
+setmem /32 0x1803c010 = 0x00000000
+
+//setmem /32 0xefff0010 = 0x800000f8
+//setmem /32 0xefff0014 = 0x180000f8
+//setmem /32 0xefff0000 = 0x80000000
+

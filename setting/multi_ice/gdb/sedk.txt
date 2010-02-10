@@ -1,0 +1,15 @@
+## Socle Technology Corp.
+######################################
+echo Socle Soc Enable Development Kit \n
+echo GDB initial... \n
+
+##SCU
+set *(0x1e8e000c)=0xdeadbeef
+
+## SDR Setting
+set *(0x19c24004)=0x40f
+set *(0x19c24008)=0x0
+
+
+##SEDK MAC Arbiter
+##set *(0x19c60024)=0xe

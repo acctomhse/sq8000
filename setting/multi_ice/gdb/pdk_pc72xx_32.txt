@@ -1,0 +1,60 @@
+## Socle Technology Corp.
+###################################
+echo Socle Panther Development Kit PC72xx 32 bit\n
+echo GDB initial... \n
+
+##SCU
+set *(0x1803C018) = 0xbeefdead
+
+## SDR Setting
+set *(0x18058100) = 0x00000020
+set *(0x18058104) = 0x000000ff
+set *(0x18058108) = 0x00002121
+set *(0x1805810C) = 0x0000000A
+
+## SCU UCFG/DCFG Mode
+## UCFG:3 DCFG:1 ##
+set *(0x1803c00c) = 0x00032000
+
+## frequency 
+## 133MHz ##
+set *(0x1803c004) = 0x0f010f87
+
+## 132MHz ##
+##set *(0x1803c004) = 0x0f010f84
+
+## 166MHz ##
+##set *(0x1803c004) = 0x0f015228
+
+## 120MHz ##
+##set *(0x1803c004) = 0x0f010900
+
+## 100MHz ##
+##set *(0x1803c004) = 0x0f0128a0
+
+## 90MHz ##
+##set *(0x1803c004) = 0x0f010e01
+
+## 83MHz ##
+##set *(0x1803c004) = 0x0f012891
+
+## 66MHz ##
+##set *(0x1803c004) = 0x0f010f85
+
+## 50MHz ##
+##set *(0x1803c004) = 0x0f0128a1
+
+## 41.5MHz ##
+##set *(0x1803c004) = 0x0f012893
+
+## 33MHz ##
+##set *(0x1803c004) = 0x0f010f87
+
+## 1:1 ##
+set *(0x1803c008) = 0x00001770
+
+## 2:1 ##
+//set *(0x1803c008) = 0x00011770	
+set *(0x1803c018) = 0xdeeddeed
+
+

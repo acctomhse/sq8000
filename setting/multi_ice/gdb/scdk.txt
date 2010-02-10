@@ -1,0 +1,74 @@
+## Socle Technology Corp.
+#####################################
+echo Socle Super Cheetah Development Kit \n
+echo GDB initial... \n
+
+#####################################
+## Mem. Remap
+set *(0x1d1a0024)=0xcc010016
+
+## SDR Mem. Setting
+set *(0x18004000)=0x30
+set *(0x18004004)=0x1f
+set *(0x18004008)=0x0011
+set *(0x18004024)=0x2
+
+## XIN=16
+## 33MHz  , N=2 M=33 OD=3 ##
+set *(0x1d1a0000=0x0887
+
+## 66MHz  , N=2 M=33 OD=2 ##
+##set *(0x1d1a0000)=0x886
+
+## 80MHz  , N=2 M=40 OD=2 ##	
+##set *(0x1d1a0000)=0x8a2
+
+## 100MHz , N=2 M=25 OD=1 ##
+##set *(0x1d1a0000)=0x865
+
+## 133MHz , N=2 M=33 OD=1 ##
+##set *(0x1d1a0000)=0x885
+
+## 200MHz , N=2 M=50 OD=1 ##	
+##set *(0x1d1a0000)=0x8c9
+
+## 266MHz , N=2 M=66 OD=1 ##	
+##set *(0x1d1a0000)=0x909
+
+## 300MHz , N=2 M=75 OD=1 ##	
+##set *(0x1d1a0000)=0x92d
+
+## 320MHz , N=2 M=80 OD=1 ##	
+##set *(0x1d1a0000)=0x941
+
+## 340MHz , N=2 M=85 OD=1 ##	
+##set *(0x1d1a0000)=0x955
+
+## 350MHz , N=2 M=88 OD=1 ##	
+##set *(0x1d1a0000)=0x961
+
+## 360MHz , N=2 M=90 OD=1 ##	
+##set *(0x1d1a0000)=0x969
+
+## 400MHz , N=2 M=100 OD=1 ##	
+##set *(0x1d1a0000)=0x991	
+
+
+## 1:1 ##
+set *(0x1d1a0018)=0x0
+
+## 2:1 ##
+##set *(0x1d1a0018)=0x1
+
+## 3:1 ##	
+##set *(0x1d1a0018)=0x2	
+
+## 4:1 ##
+##set *(0x1d1a0018)=0x3
+
+## 8:1 ##
+##set *(0x1d1a0018)=0x4	
+
+## normal mode
+set *(0x1d1a001c)=0x1
+

@@ -1,0 +1,247 @@
+mainmenu "SOCLE Diagnostic Program Configuration"
+
+comment "Socle Platforms"
+choice
+	prompt "Platform Type"
+	default CONFIG_PC9220
+
+config CONFIG_PC9220
+	bool "PDK-PC9220"
+	help
+		PDK-PC9220
+
+endchoice
+
+comment "Socle CPUs"
+
+choice
+	prompt "CPU Type"
+	default CONFIG_ARM9
+
+config CONFIG_MIPS
+	bool "MIPS"
+	help
+		MIPS
+
+config CONFIG_ARM7
+	bool "ARM7"
+	help
+		ARM726ejs
+
+config CONFIG_ARM7_HI
+	bool "ARM7_HI"
+	help
+		ARM726ejs High Vector
+
+config CONFIG_ARM9
+	bool "ARM9"
+	help
+		ARM926ejs
+
+endchoice
+
+
+comment "Socle CPU Endians"
+
+choice
+	prompt "CPU Endian Type"
+	default CONFIG_LITTLE_ENDIAN
+
+config CONFIG_BIG_ENDIAN
+	bool "Big Endian"
+	help
+		Big Endian
+
+config CONFIG_LITTLE_ENDIAN
+	bool "Little Endian"
+	help
+		Little Endian
+
+endchoice
+
+
+comment "Socle IPs Test Items"
+
+#	GPIO
+config CONFIG_GPIO
+	bool "GPIO Test"
+	help
+		Socle General Purpose Input Output Test
+
+#	MEMORY
+config CONFIG_MEMORY
+	bool "DDR + SDR Test"
+	help
+		Socle DDR + SDR Test
+		
+#	INTERRUPT
+config CONFIG_INTERRUPT
+	bool "Interrupt Test"
+	help
+		Socle Interrupt Test
+
+#	UART
+config CONFIG_UART
+	bool "UART Test"
+	help
+		Socle UART Test
+
+#	TIMER
+config CONFIG_TIMER
+	bool "Timer Test"
+	help
+		Socle Timer Test
+
+#	WDT
+config CONFIG_WDT
+	bool "WDT Test"
+	help
+		Socle Watch Dog Timer Test
+
+#	RTC
+config CONFIG_RTC
+	bool "RTC Test"
+	help
+		Socle Real Time Clock Test
+
+#	SPI
+config CONFIG_SPI
+	bool "SPI Test"
+	help
+		Socle Serial Peripheral Interface Test
+
+#	UDC
+config CONFIG_UDC
+	bool "UDC Test"
+	help
+		Socle Universal Serial Bus Test
+
+#	MAC
+config CONFIG_MAC
+	bool "MAC Test"
+	help
+		Socle Medium Access Control Test
+
+#	PANTHER7-HDMA
+config CONFIG_PANTHER7_HDMA
+	bool "HDMA Test for PANTHER7"
+	help
+		Socle PANTHER7 HDMA Test
+
+#	I2S
+config CONFIG_I2S
+	bool "I2S Test"
+	help
+		Socle Inter-Integrated Sound Bus Test
+
+choice
+	prompt "Audio Codec Type"
+	default CONFIG_UDA1342TS
+	depends on CONFIG_I2S
+
+config CONFIG_MS6335
+	bool "MOSA"
+	depends on CONFIG_I2S
+	help
+		Audio Codec MOSA
+
+config CONFIG_UDA1342TS
+	bool "UDA1342TS"
+	depends on CONFIG_I2S
+	help
+		Audio Codec UDA1342TS
+endchoice
+
+#	I2C
+config CONFIG_I2C
+	bool "I2C Test"
+	help
+		Socle Inter-Integrated Circuit Bus Test
+
+#	SDMMC
+config CONFIG_SDMMC
+	bool "SDMMC Test"
+	help
+		Socle Secure Digital Test
+
+#	NOR-MXIC
+config CONFIG_NOR_MXIC
+	bool "NOR-FLASH-MXIC Test"
+	help
+		Socle NOR-FLASH-MXIC Test
+		
+#	NAND
+config CONFIG_NAND
+	bool "NAND-FLASH Test"
+	help
+		Socle NAND-FLASH Test
+
+#	EHCI
+config CONFIG_EHCI
+	bool "EHCI Test"
+	help
+		Socle EHCI Test
+
+#	OHCI
+config CONFIG_OHCI
+	bool "OHCI Test"
+	help
+		Socle OHCI Test
+
+
+#	SCU
+config CONFIG_SCU
+	bool "SCU Test"
+	help
+		Socle System Control Unit Test
+
+#	LCD & PWM
+config CONFIG_SOCLE_LCD
+	bool "Socle LCD Test"
+	help
+		Socle LCD(CADENCE) Test
+
+#	ADC & PWM
+config CONFIG_ADC_PWM
+	bool "ADC & PWM Test"
+	help
+		Socle ADC & PWM Test
+
+#	VIOP
+config CONFIG_VIOP
+	bool "SOCLE VIOP Test"
+	help
+		Socle VIOP Test
+
+#	LCM
+config CONFIG_LCM
+	bool "LCM Test"
+	help
+		Socle LCD Module Test
+
+comment "Socle Debugers"
+
+choice
+	prompt "Debuger Type"
+	default CONFIG_SEMIHOST
+
+config CONFIG_SEMIHOST
+	bool "SemiHost"
+	help
+		SemiHost Debuger
+
+config CONFIG_GDB
+	bool "GDB"
+	select CONFIG_UART_DISP
+	help
+		GNU Debuger
+
+endchoice
+
+
+comment "Socle UART Display"
+
+config CONFIG_UART_DISP
+	bool "With UART"
+	help
+		With UART Display

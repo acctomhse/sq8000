@@ -1,0 +1,43 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Cheetah Development Kit
+// RVDEBUG initial...
+
+/////////////////////////////////////
+// Mem. Remap
+setmem /32 0x1d1a0024=0xcad20712
+
+//CDK SDR
+//setmem /32 0x18004000=0x20
+setmem /32 0x18004000=0x30
+setmem /32 0x18004004=0x1f
+setmem /32 0x18004008=0x0011
+setmem /32 0x18004024=0x002
+
+//CDK XIN=48
+//setmem /32 0x1d1a0000=0x78050		//33MHz		N=15	M=10	OD=0
+//setmem /32 0x1d1a0000=0x38050		//66MHz		N=7	M=10	OD=0
+//setmem /32 0x1d1a0000=0x10020		//80MHz		N=2	M=4	OD=0
+//setmem /32 0x1d1a0000=0x580c0		//100MHz	N=11	M=24	OD=0
+//setmem /32 0x1d1a0000=0x18050		//132MHz	N=3	M=10	OD=0
+//setmem /32 0x1d1a0000=0xb8421		//133MHz	N=23	M=132	OD=1
+//setmem /32 0x1d1a0000=0x280c0		//200MHz	N=5	M=24	OD=0
+setmem /32 0x1d1a0000=0x180a8		//264MHz	N=3	M=21	OD=0
+//setmem /32 0x1d1a0000=0xb8420		//266MHz	N=23	M=132	OD=0
+//setmem /32 0x1d1a0000=0x28110		//280MHz	N=5	M=34	OD=0
+//setmem /32 0x1d1a0000=0x180c0		//300MHz	N=3	M=24	OD=0
+//setmem /32 0x1d1a0000=0x10098		//320MHz	N=2	M=19	OD=0
+//setmem /32 0x1d1a0000=0x582a0		//340MHz	N=11	M=84	OD=0
+//setmem /32 0x1d1a0000=0xb8570		//350MHz	N=23	M=174	OD=0
+//setmem /32 0x1d1a0000=0x8070		//360MHz	N=1	M=14	OD=0
+//setmem /32 0x1d1a0000=0x100c0		//400MHz	N=2	M=24	OD=0
+
+setmem /32 0x1d1a000c=0x1	//2:1
+//setmem /32 0x1d1a000c=0x2	//4:1
+//setmem /32 0x1d1a000c=0x3	//8:1
+
+//set MPLL output clock
+setmem /32 0x1d1a0008=0x1
+
+
+

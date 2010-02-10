@@ -1,0 +1,71 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Leopard Development Kit III V2.1
+// RVDEBUG initial...
+
+/////////////////////////////////////
+// Mem. Remap
+setmem /32 0x1e8e000c=0xdeadbeef
+//ce ((long *)0x1e8e000c)[0]=0xdeadbeef
+
+
+/////////////////////////////////////
+// Mem. Setting
+
+// SDR Setting
+setmem /32 0x19c24004=0x4cd
+setmem /32 0x19c24008=0x2210
+
+
+// DDR Setting
+
+// 133M/133M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000050a
+
+// 120M/120M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000050a
+
+// 100M/100M
+setmem /32 0x19c04000=0x00001161
+setmem /32 0x19c0400c=0x0000040a
+
+// 66M/66M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000030a
+
+// 50M/50M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000030a
+
+// 33M/33M
+//setmem /32 0x19c04000=0x00001131
+//setmem /32 0x19c0400c=0x0000030a
+
+// 200M/100M
+//setmem /32 0x19c04000=0x00001061
+//setmem /32 0x19c0400c=0x0000050a
+
+// 133M/66M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000030a
+
+// 100M/50M
+//setmem /32 0x19c04000=0x00001161
+//setmem /32 0x19c0400c=0x0000030a
+
+// 66M/33M
+//setmem /32 0x19c04000=0x00001131
+//setmem /32 0x19c0400c=0x0000030a
+
+/////////////////////////////////////
+// Show Mem. Setting
+printf "Address:%m" , 0x1e8e400c
+printf "Address:%m" , 0x19c04000
+printf "Address:%m" , 0x19c0400c
+
+/////////////////////////////////////
+// Load Program & Run
+//load/pd/r 'Z:\Diagnostic_LDK3.0-1.0.0_usb\Build\ARM_L3\L3A.out'
+//go

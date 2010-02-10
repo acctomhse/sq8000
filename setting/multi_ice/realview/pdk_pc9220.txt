@@ -1,0 +1,55 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle PDK-PC9220
+// RVDEBUG initial...
+
+/////////////////////////////////////
+// Mem. Remap
+setmem /32 0x19100024=0x92200800
+
+//Mobile SDR 32bit Mem. Setting
+//setmem /32 0x18004000 = 0x00000030
+//setmem /32 0x18004004 = 0x0000001A
+//setmem /32 0x18004008 = 0x00002121
+//setmem /32 0x1800400C = 0x0000000A
+
+// SDR 32bit Mem. Setting
+setmem /32 0x18004000 = 0x00000020
+setmem /32 0x18004004 = 0x000000ff
+setmem /32 0x18004008 = 0x00002121
+setmem /32 0x1800400C = 0x0000000A
+
+// SDR 16bit Mem. Setting
+//setmem /32 0x18004000 = 0x00000020
+//setmem /32 0x18004004 = 0x0000002a
+//setmem /32 0x18004008 = 0x00002121
+//setmem /32 0x1800400C = 0x00000005
+
+
+// CPU CLK PLL setting
+//        /* for 12 MHz */
+//setmem /32 0x19100000 = 0x320080ab    // 33MHz
+//setmem /32 0x19100000 = 0x320080a9    // 66MHz
+//setmem /32 0x19100000 = 0x3200813a    // 80MHz
+//setmem /32 0x19100000 = 0x3200818a    //100MHz
+//setmem /32 0x19100000 = 0x320080a8    //132MHz
+//setmem /32 0x19100000 = 0x3202884b    //133MHz
+//setmem /32 0x19100000 = 0x32028290    //166MHz
+//setmem /32 0x19100000 = 0x32010188    //200MHz
+//setmem /32 0x19100000 = 0x32008138    //240MHz
+//setmem /32 0x19100000 = 0x320000a0    //252MHz
+//setmem /32 0x19100000 = 0x32008158    //264MHz
+//setmem /32 0x19100000 = 0x32028849    //266MHz
+//setmem /32 0x19100000 = 0x32010228    //280MHz
+//setmem /32 0x19100000 = 0x32008188    //300MHz
+//setmem /32 0x19100000 = 0x32010278    //320MHz
+//setmem /32 0x19100000 = 0x32028548    //340MHz
+//setmem /32 0x19100000 = 0x32058ae8    //350MHz
+//setmem /32 0x19100000 = 0x320081d8    //360MHz
+//setmem /32 0x19100000 = 0x32010318    //400MHz
+
+
+setmem /32 0x19100004 = 0x320080f8 //for UART PLL
+setmem /32 0x19100018 = 0x04008151 //for 2:1, and UART0,1,2 UPLL
+setmem /32 0x1910001c = 0x1 //for Enable PLL
+setmem /32 0x19100028 = 0x300009 //for setting UART

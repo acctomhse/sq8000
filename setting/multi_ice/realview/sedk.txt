@@ -1,0 +1,15 @@
+// Socle Technology Corp.
+/////////////////////////////////////
+// Socle Soc Enable Development Kit
+// RVDEBUG initial...
+
+//SCU
+setmem /32 0x1e8e000c=0xdeadbeef
+
+// SDR Setting
+setmem /32 0x19c24004=0x40f
+setmem /32 0x19c24008=0x0
+
+
+//SEDK MAC Arbiter
+//setmem /32 0x19c60024=0xe

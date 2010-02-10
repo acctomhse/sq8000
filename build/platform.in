@@ -1,0 +1,40 @@
+ifeq "y" "$(CONFIG_LDK3V21)"
+platform_arch	= LDK3V21
+endif
+
+ifeq "y" "$(CONFIG_LDK5)"
+platform_arch	= LDK5
+endif
+
+ifeq "y" "$(CONFIG_SEDK)"
+platform_arch	= SEDK
+endif
+
+ifeq "y" "$(CONFIG_CDK)"
+platform_arch	= CDK
+endif
+
+ifeq "y" "$(CONFIG_PDK)"
+platform_arch   = PDK
+endif
+
+ifeq "y" "$(CONFIG_PC7210)"
+platform_arch   = PDK_PC72xx
+endif
+
+ifeq "y" "$(CONFIG_PC9002)"
+platform_arch   = PDK_PC9002
+endif
+
+ifeq "y" "$(CONFIG_PC9220)"
+platform_arch   = PDK_PC9220
+endif
+
+ifeq "y" "$(CONFIG_SCDK)"
+platform_arch   = SCDK
+endif
+
+ifeq "y" "$(CONFIG_MSMV)"
+platform_arch   = MSMV
+endif
+

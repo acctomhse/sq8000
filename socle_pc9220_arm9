@@ -1,0 +1,84 @@
+#
+# Automatically generated make config: don't edit
+#
+
+#
+# Socle Platforms
+#
+# CONFIG_LDK3V21 is not set
+# CONFIG_LDK5 is not set
+# CONFIG_SEDK is not set
+# CONFIG_CDK is not set
+# CONFIG_PDK is not set
+# CONFIG_PC7210 is not set
+# CONFIG_PC9002 is not set
+CONFIG_PC9220=y
+# CONFIG_SCDK is not set
+# CONFIG_MSMV is not set
+# CONFIG_INR_PC7230 is not set
+
+#
+# Socle CPUs
+#
+# CONFIG_MIPS is not set
+# CONFIG_ARM7 is not set
+# CONFIG_ARM7_HI is not set
+CONFIG_ARM9=y
+
+#
+# Socle CPU Endians
+#
+# CONFIG_BIG_ENDIAN is not set
+CONFIG_LITTLE_ENDIAN=y
+
+#
+# Socle IPs Test Items
+#
+CONFIG_GPIO=y
+# CONFIG_MP_GPIO is not set
+CONFIG_MEMORY=y
+# CONFIG_CACHE is not set
+CONFIG_INTERRUPT=y
+CONFIG_UART=y
+CONFIG_TIMER=y
+CONFIG_WDT=y
+CONFIG_RTC=y
+CONFIG_SPI=y
+CONFIG_UDC=y
+# CONFIG_PCI is not set
+CONFIG_MAC=y
+# CONFIG_HDMA is not set
+CONFIG_PANTHER7_HDMA=y
+# CONFIG_MPEG4 is not set
+CONFIG_I2S=y
+CONFIG_MS6335=y
+# CONFIG_UDA1342TS is not set
+CONFIG_I2C=y
+# CONFIG_SI4703 is not set
+CONFIG_SDMMC=y
+# CONFIG_A2ADMA is not set
+# CONFIG_NOR is not set
+CONFIG_NOR_MXIC=y
+CONFIG_NAND=y
+CONFIG_EHCI=y
+CONFIG_OHCI=y
+# CONFIG_IDE is not set
+CONFIG_SCU=y
+# CONFIG_LCD_PWM is not set
+CONFIG_SOCLE_LCD=y
+CONFIG_ADC_PWM=y
+CONFIG_VIOP=y
+CONFIG_LCM=y
+# CONFIG_7230_PS is not set
+# CONFIG_SRAM is not set
+
+#
+# Socle Debugers
+#
+CONFIG_SEMIHOST=y
+# CONFIG_GDB is not set
+
+#
+# Socle UART Display
+#
+# CONFIG_UART_DISP is not set

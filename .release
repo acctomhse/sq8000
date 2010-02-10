@@ -1,0 +1,19 @@
+# ---------------------------------------------------------------------------
+# tar for release
+
+# Version Definition
+# Major (2byte):
+# 	Design, Chip, Feature, Function
+# Minor (2byte):
+# 	ToolChain, Performance, OS Version, BugFix, Document
+
+REVISION	= 03.00
+MAIN_VERSION	= XDK_NOS_DGS
+
+all: release
+
+release:
+	$(shell echo $(REVISION) > .revision)
+	$(shell echo \#define REVISION \"$(REVISION)\" > include/lib/revision.h)
+	tar jcvf ../$(MAIN_VERSION)_$(REVISION).tar.bz2 ../Diagnostic/
+

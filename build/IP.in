@@ -1,0 +1,157 @@
+# always include
+sinclude src/DMA/service.mk
+
+
+ifeq "y" "$(CONFIG_GPIO)"
+sinclude src/GPIO/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_MP_GPIO)"
+sinclude src/MP_GPIO/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_MEMORY)"
+sinclude src/MEM/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_CACHE)"
+sinclude src/CACHE/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_INTERRUPT)"
+sinclude src/Interrupt/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_UART)"
+sinclude src/UART/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_TIMER)"
+sinclude src/TIMER/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_WDT)"
+sinclude src/WDT/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_RTC)"
+sinclude src/RTC/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_SPI)"
+sinclude src/SPI/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_UDC)"
+sinclude src/UDC/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_PCI)"
+sinclude src/PCI/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_MAC)"
+sinclude src/MAC/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_PSEUDO_EXTBOARD)"
+sinclude src/EXT_Pseudo/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_HDMA_EXTBOARD)"
+sinclude src/EXT_HDMA/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_HDMA)"
+sinclude src/HDMA/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_PANTHER7_HDMA)"
+sinclude src/PANTHER7-HDMA/IP.mk
+endif
+
+
+ifeq "y" "$(CONFIG_MULTI_MEM)"
+sinclude src/MULTI_MEM/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_I2C)"
+sinclude src/I2C/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_I2S)"
+sinclude src/I2S/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_MPEG4)"
+sinclude src/MPEG4/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_SDMMC)"
+sinclude src/SDMMC/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_A2ADMA)"
+sinclude src/A2A/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_NOR)"
+sinclude src/NOR/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_NOR_MXIC)"
+sinclude src/NOR-MXIC/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_NAND)"
+sinclude src/NAND/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_EHCI)"
+sinclude src/EHCI/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_OHCI)"
+sinclude src/OHCI/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_IDE)"
+sinclude src/IDE/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_MAILBOX)"
+sinclude src/MailBox/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_SCU)"
+sinclude src/SCU/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_LCD_PWM)"
+sinclude src/LCD_PWM/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_SOCLE_LCD)"
+sinclude src/LCD/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_ADC_PWM)"
+sinclude src/ADC_PWM/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_VIOP)"
+sinclude src/VIP_VOP/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_LCM)"
+sinclude src/LCM/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_7230_PS)"
+sinclude src/7230_PS/IP.mk
+endif
+
+ifeq "y" "$(CONFIG_SRAM)"
+sinclude src/SRAM/IP.mk
+endif
+

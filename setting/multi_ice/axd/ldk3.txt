@@ -1,0 +1,11 @@
+smem 0x1e8e000c 0xdeadbeef 32
+
+smem 0x19c24004 0x4cd 32
+smem 0x19c24008 0x2210 32
+
+smem 0x19c04000 0x00001161 32
+smem 0x19c0400c 0x0000040a 32
+
+printf "Address:%m" , 0x1e8e400c
+printf "Address:%m" , 0x19c04000
+printf "Address:%m" , 0x19c0400c
